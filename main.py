@@ -1,15 +1,11 @@
 #this file was created by bryce raymundo
 #sources https://goo.gl/v9tpzL  
-#321
-
-
-
-
 
 import pygame as pg 
 import random
 from settings import *
 from sprites import *
+
 
 class Game:
     def __init__(self):
@@ -28,8 +24,9 @@ class Game:
         #add a player 1 to the group
         self.player = Player()
         #add a player 2
-        self.player2 = Player()
-        self.all_sprites.add(self.player, self.player2)
+        self.enemy = Enemy()
+        self.platform = Platform()
+        self.all_sprites.add(self.player, self.enemy, self.platform)
         #call the run method
         self.run()
     def run(self):
